@@ -9,6 +9,7 @@ case class Cat(name: String, gender: String, color: String){
     def gender = column[String]("gender", O.NotNull)
     def color = column[String]("color", O.NotNull)
     
+    
     def * = name ~ gender ~ color <> (Cat, Cat.unapply _)
   
     // auto increment handler
