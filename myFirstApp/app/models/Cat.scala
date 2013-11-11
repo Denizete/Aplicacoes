@@ -11,6 +11,7 @@ case class Cat(name: String, gender: String, color: String){
         
     def * = name ~ gender ~ color <> (Cat, Cat.unapply _)
   
+    
     // auto increment handler
     def autoInc = * returning name
     
